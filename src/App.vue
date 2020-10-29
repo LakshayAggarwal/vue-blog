@@ -1,32 +1,44 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Blog App</router-link>
     </div>
-    <router-view/>
+    <router-view class="route-container"/>
+    <footer class="footer">
+      Copyright © 2020. All rights reserved.
+    </footer>
   </div>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #nav {
+    height: 10vh;
+    background: #333;
+    padding: 25px;
+    display: flex;
+    color: #fff;
+    justify-content: left;
+    align-items: center;
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
+  }
+
+  .route-container {
+    padding-top: 20px;
+    min-height: 80vh;
+  }
+
+  .footer {
+    display: flex;
+    font-size: 0.8rem;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 </style>
